@@ -4,8 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/pokemonBg.png')",
-        "footer-texture": "url('/img/footer-texture.png')",
+        "pokemon-pattern": "url('/src/assets/pokemonBg.png')",
       },
     },
   },
