@@ -16,7 +16,7 @@ const App = () => {
     setIsVisible(true);
   };
   return (
-    <div className="bg-pokemon-pattern bg-no-repeat bg-center bg-fixed bg-contain lg:bg-cover">
+    <div className="bg-pokemon-pattern bg-no-repeat bg-center bg-fixed bg-contain lg:bg-cover min-h-screen">
       {!isFetching ? (
         <div className="flex w-full flex-col items-center p-4 sm:p-10 gap-4 ">
           <select
