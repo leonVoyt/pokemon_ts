@@ -1,6 +1,5 @@
 import { FC, useEffect, useState } from "react";
 import { pokemonApi } from "../services/pokemonService";
-import Loader from "./Loader";
 
 const PokemonAbility: FC<PokemonAbilityProps> = ({ name }) => {
   const { data, isFetching } =
