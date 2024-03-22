@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react";
+import { useState } from "react";
 
 import { pokemonApi } from "./services/pokemonService";
 import DefaultPokemonCard from "./components/DefaultPokemonCard";
@@ -9,7 +9,7 @@ const App = () => {
   const { data: allPokemons, isFetching } =
     pokemonApi.useGetAllPokemonsQuery(limit);
   const [isVisible, setIsVisible] = useState(false);
-  const [detailUrl, setDetailUrl] = useState("1");
+  const [detailUrl, setDetailUrl] = useState("");
 
   const handleClick = (name: string) => {
     setDetailUrl(name);
@@ -41,11 +41,7 @@ const App = () => {
         </div>
 
         <div className="w-7/12 sm:w-5/12 flex justify-center relative">
-          {isVisible && (
-            <Suspense fallback={<>dffsdf</>}>
-              <PokemonCard name={detailUrl} />
-            </Suspense>
-          )}
+          {isVisible && <PokemonCard name={detailUrl} />}
         </div>
       </div>
     </div>
